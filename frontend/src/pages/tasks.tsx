@@ -9,6 +9,8 @@ interface Task {
   isComplete: boolean;
 }
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const TasksPage: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [editingTaskId, setEditingTaskId] = useState<number>(-1);
@@ -20,7 +22,7 @@ const TasksPage: React.FC = () => {
   const fetchTasks = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:8080/tasks`, {
+      const response = await axios.get(`${API_URL}/tasks`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTasks(response.data);
@@ -33,7 +35,7 @@ const TasksPage: React.FC = () => {
   const createTask = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.post(`http://localhost:8080/tasks`, newTask, {
+      await axios.post(`${API_URL}/tasks`, newTask, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchTasks(); // Refresh the task list
@@ -47,7 +49,7 @@ const TasksPage: React.FC = () => {
   const updateTask = async (id: number, updatedTask: Partial<Task>) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:8080/tasks/${id}`, updatedTask, {
+      await axios.put(`${API_URL}/tasks/${id}`, updatedTask, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchTasks(); // Refresh the task list
@@ -60,7 +62,7 @@ const TasksPage: React.FC = () => {
   const deleteTask = async (id: number) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:8080/tasks/${id}`, {
+      await axios.delete(`${API_URL}/tasks/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchTasks(); // Refresh the task list
