@@ -59,15 +59,12 @@ authRouter.post("/login", async (req: Request, res: Response) => {
     const result = await pool.query<User>(query, values);
 
     if (result.rows.length === 0) {
-      console.log("result.rows.length", result.rows, result.rows.length);
       res.status(401).json({ message: "Invalid credentials" });
       return;
     }
 
     const user = result.rows[0];
     const isValidPassword = await bcrypt.compare(password, user.password);
-
-    console.log("isValidPassword", isValidPassword);
 
     if (!isValidPassword) {
       res.status(401).json({ message: "Invalid credentials" });
