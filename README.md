@@ -33,9 +33,15 @@ This is a “Task Management” application with **React + TypeScript** (fronten
   - **Token Verification**: Verify the token (JWT) on each request to protected routes.
 
 ### 2. Backend (Node.js)
+```sh
+cd backend
+```
 Check [Readme](backend/README.md)
 
 ### 3. Frontend (React + TypeScript + Vite)
+```sh
+cd frontend
+```
 Check [Readme](frontend/README.md)
 
 
