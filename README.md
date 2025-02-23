@@ -27,8 +27,9 @@ This is a “Task Management” application with **React + TypeScript** (fronten
 
 - **User Model**:
   - `id`: Primary key
-  - `username`: Unique string
-  - `password`: Hashed string
+  - `username`: string
+  - `email`: unique string
+  - `password`: hashed string
 - **Endpoints**:
   - `POST /auth/register` – Create a new user
   - `POST /auth/login` – Login user, return a token (e.g., JWT)
