@@ -46,6 +46,6 @@ Check [Readme](frontend/README.md)
 
 
 <details>
-  <summary>Q1: hello </summary>
-    A1: world
+  <summary>Salary Expectation? </summary>
+    4,000 ~ 5,000 USD
 </details>
