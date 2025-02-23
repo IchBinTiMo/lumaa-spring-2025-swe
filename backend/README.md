@@ -37,7 +37,3 @@
 - **Database**: PostgreSQL
     - `users` table (with hashed passwords)
     - `tasks` table
-- **Setup**:
-  - `npm install` to install dependencies
-  - `npm run start` (or `npm run dev`) to run the server
-  - Document any environment variables (e.g., database connection string, JWT secret)
