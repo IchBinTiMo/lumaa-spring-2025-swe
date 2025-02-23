@@ -25,14 +25,9 @@ This is a “Task Management” application with **React + TypeScript** (fronten
 
 ### 1. Authentication
 
-- **User Model**:
-  - `id`: Primary key
-  - `username`: string
-  - `email`: unique string
-  - `password`: hashed string
 - **Endpoints**:
-  - `POST /auth/register` – Create a new user
-  - `POST /auth/login` – Login user, return a token (e.g., JWT)
+  - `POST /register` – Create a new user
+  - `POST /login` – Login user, return a token (e.g., JWT)
 - **Secure the Tasks Routes**: Only authenticated users can perform task operations.  
   - **Password Hashing**: Use `bcrypt` or another hashing library to store passwords securely.
   - **Token Verification**: Verify the token (JWT) on each request to protected routes.
