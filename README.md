@@ -19,7 +19,7 @@ This is a “Task Management” application with **React + TypeScript** (fronten
 
 ## Demo
 
-<img src="./demo.gif" width="400" height="300"></img>
+[Demo Video](https://drive.google.com/file/d/19DqXS-JoQ4FHAjQH1w_hzCveeraPmKiC/view?usp=drive_link)
 
 ## Features
 
