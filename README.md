@@ -19,7 +19,7 @@ This is a “Task Management” application with **React + TypeScript** (fronten
 
 ## Demo
 
-![Demo](./demo.mp4)
+[Demo](./demo.mp4)
 
 ## Features
 
