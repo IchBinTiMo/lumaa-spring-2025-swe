@@ -1,11 +1,29 @@
-# React + TypeScript + Vite
+# Frontend (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Setup Instructions
 
-Currently, two official plugins are available:
+### Prerequisites
+- **Node.js**: Download [Here](https://nodejs.org/en/download)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### How to Run
+1. check [.env.example](./.env.example) to set required environment variables.
+2. `npm install` to install dependencies
+3. `npm run dev` to run the server
+
+## Features
+- **Login / Register**:
+  - Simple forms for **Register** and **Login**.
+  - Store JWT (e.g., in `localStorage`) upon successful login.
+  - If not authenticated, the user should not see the tasks page.
+- **Tasks Page**:
+  - Fetch tasks from `GET /tasks` (including auth token in headers).
+  - Display the list of tasks.
+  - Form to create a new task (`POST /tasks`).
+  - Buttons/fields to update a task (`PUT /tasks/:id`).
+  - Button to delete a task (`DELETE /tasks/:id`).
+- **Navigation**:
+  - Show `Login`/`Register` if not authenticated.
+  - Show `Logout` if authenticated.
 
 ## Expanding the ESLint configuration
 
